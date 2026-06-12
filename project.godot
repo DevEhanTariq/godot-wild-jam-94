@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="GodotWildJam94"
+run/main_scene="uid://db6xpf45qwui5"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Art/icon.svg"
+
+[display]
+
+window/size/mode=2
+window/stretch/mode="viewport"
 
 [physics]
 

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cwi0p3x61bghe"]
+
+[ext_resource type="Texture2D" uid="uid://dda6f6h3ngx5a" path="res://Assets/Art/TestTubeLayer.png" id="1_6jgwb"]
+[ext_resource type="Texture2D" uid="uid://cclne66f1oxgt" path="res://Assets/Art/TestTubeLiquid.png" id="2_stytp"]
+
+[node name="Node" type="Node" unique_id=865289625]
+
+[node name="TestTubeBottomLayer" type="Sprite2D" parent="." unique_id=654724964]
+texture = ExtResource("1_6jgwb")
+
+[node name="Liquid" type="Sprite2D" parent="TestTubeBottomLayer" unique_id=523919205]
+texture = ExtResource("2_stytp")
+
+[node name="TestTubeTopLayer" type="Sprite2D" parent="TestTubeBottomLayer/Liquid" unique_id=1408462255]
+texture = ExtResource("1_6jgwb")
