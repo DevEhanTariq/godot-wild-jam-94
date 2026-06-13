@@ -17,3 +17,12 @@ position = Vector2(-170, 178)
 
 [node name="TestTubeOutline2" parent="." unique_id=11338475 instance=ExtResource("2_al4wj")]
 position = Vector2(171, 177)
+
+[node name="Button" type="Button" parent="." unique_id=1423861710]
+offset_left = 321.0
+offset_top = -296.00003
+offset_right = 329.0
+offset_bottom = -288.00003
+scale = Vector2(10, 10)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
