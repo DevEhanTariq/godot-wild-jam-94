@@ -18,8 +18,9 @@ func _on_button_pressed() -> void:
 		var TestTube = $TestTube
 		var localInventory = get_parent()
 		
+		localInventory.TestTubes.append(Global.TestTubes[Global.Selected])
+		
 		if delete:
-			localInventory.TestTubes.append(Global.TestTubes[Global.Selected])
 			Global.RemoveTestTube()
 	
 		TestTube.CX = localInventory.TestTubes[-1][0]

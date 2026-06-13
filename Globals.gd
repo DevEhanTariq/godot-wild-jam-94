@@ -11,7 +11,7 @@ func _ready() -> void:
 	Global.TestTubes.append([randf_range(0.0,1.0), randf_range(0.0,1.0), randf_range(0.0,1.0), len(Global.TestTubes)])
 	Global.TestTubes.append([randf_range(0.0,1.0), randf_range(0.0,1.0), randf_range(0.0,1.0), len(Global.TestTubes)])
 	Global.TestTubes.append([randf_range(0.0,1.0), randf_range(0.0,1.0), randf_range(0.0,1.0), len(Global.TestTubes)])
-
+	Global.TestTubes.append([randf_range(0.0,1.0), randf_range(0.0,1.0), randf_range(0.0,1.0), len(Global.TestTubes)])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -15,9 +15,9 @@ func _process(delta: float) -> void:
 	var Info = $InfoHover
 	var liquid = $TestTubeBottomLayer/Liquid
 	
-	Info.ChemX = CX
-	Info.ChemY = CY
-	Info.ChemZ = CZ
+	Info.ChemX = CX * Opac
+	Info.ChemY = CY * Opac
+	Info.ChemZ = CZ * Opac
 	
 	var mat = liquid.material as ShaderMaterial
-	mat.set_shader_parameter("tint_color", Color(CX, CY, CZ, Opac))
+	mat.set_shader_parameter("tint_color", Color(CX * Opac, CY * Opac, CZ * Opac, Opac))
