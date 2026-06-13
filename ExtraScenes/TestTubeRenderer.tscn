@@ -9,7 +9,7 @@
 shader = ExtResource("2_sb7us")
 shader_parameter/tint_color = Color(1, 1, 1, 1)
 
-[node name="Node" type="Node" unique_id=865289625]
+[node name="TestTube" type="Node" unique_id=865289625]
 script = ExtResource("1_sb7us")
 metadata/_edit_horizontal_guides_ = [-573.0]
 

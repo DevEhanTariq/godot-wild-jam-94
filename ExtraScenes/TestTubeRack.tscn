@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://calr80v4crctk"]
+
+[ext_resource type="Texture2D" uid="uid://bh860ejlsaeqn" path="res://Assets/Art/TestTubeRack.png" id="1_82boo"]
+
+[node name="TestTubeRack" type="Node" unique_id=365921571]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1713810326]
+texture = ExtResource("1_82boo")
