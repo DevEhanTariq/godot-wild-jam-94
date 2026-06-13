@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://db6xpf45qwui5"]
 
 [ext_resource type="PackedScene" uid="uid://calr80v4crctk" path="res://ExtraScenes/TestTubeRack.tscn" id="1_464uu"]
+[ext_resource type="PackedScene" uid="uid://dj0vf6q66bnvu" path="res://ExtraScenes/Inventory.tscn" id="2_nu7tu"]
 
 [node name="Node" type="Node" unique_id=980191888]
 
 [node name="TestTubeRack" parent="." unique_id=1648364924 instance=ExtResource("1_464uu")]
+position = Vector2(-386, 1187)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=358243922]
 zoom = Vector2(0.2, 0.2)
+
+[node name="Inventory" parent="." unique_id=1397416667 instance=ExtResource("2_nu7tu")]
+z_index = -1
+position = Vector2(-1967, 986)

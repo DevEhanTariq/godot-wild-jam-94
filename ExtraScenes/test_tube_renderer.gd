@@ -3,6 +3,7 @@ extends Node2D
 var CX = 0.0
 var CY = 0.0
 var CZ = 0.0
+var Opac = 1.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,4 +20,4 @@ func _process(delta: float) -> void:
 	Info.ChemZ = CZ
 	
 	var mat = liquid.material as ShaderMaterial
-	mat.set_shader_parameter("tint_color", Color(CX, CY, CZ, 1.0))
+	mat.set_shader_parameter("tint_color", Color(CX, CY, CZ, Opac))

@@ -34,6 +34,7 @@ position = Vector2(-1.5, 2.5)
 shape = SubResource("RectangleShape2D_lthjr")
 
 [node name="InfoHover" parent="." unique_id=1545355480 instance=ExtResource("4_sb7us")]
+visible = false
 position = Vector2(-57, -708)
 scale = Vector2(2, 2)
 
