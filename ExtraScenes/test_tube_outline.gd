@@ -13,19 +13,15 @@ func _process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	var Outline = $Button
 	var TestTube = $TestTube
-	var TestTubeLiquid = $TestTube/TestTubeBottomLayer/Liquid
-	var TestTubeInfo = $TestTube/InfoHover
 	
-	var CX = randf_range(0.0, 1.0)
-	var CY = randf_range(0.0, 1.0)
-	var CZ = randf_range(0.0, 1.0)
+	var localInventory = get_parent()
+	localInventory.TestTubes.append(Global.TestTubes[Global.Selected])
+	Global.RemoveTestTube()
 	
-	TestTubeInfo.ChemX = CX
-	TestTubeInfo.ChemY = CY
-	TestTubeInfo.ChemZ = CZ
-		
-	var mat = TestTubeLiquid.material as ShaderMaterial
-	mat.set_shader_parameter("tint_color", Color(CX, CY, CZ, 1.0))
+	TestTube.CX = localInventory.TestTubes[-1][0]
+	TestTube.CY = localInventory.TestTubes[-1][1]
+	TestTube.CZ = localInventory.TestTubes[-1][2]
+	
 	
 	Outline.visible = false
 	TestTube.visible = true

@@ -17,6 +17,5 @@ flat = true
 
 [node name="TestTube" parent="." unique_id=168604631 instance=ExtResource("3_ci801")]
 visible = false
-position = Vector2(-2, -10)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

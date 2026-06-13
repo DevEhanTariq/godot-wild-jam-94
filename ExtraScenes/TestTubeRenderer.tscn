@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cwi0p3x61bghe"]
 
 [ext_resource type="Texture2D" uid="uid://dda6f6h3ngx5a" path="res://Assets/Art/TestTubeLayer.png" id="1_6jgwb"]
+[ext_resource type="Script" uid="uid://ceco383k1esv1" path="res://ExtraScenes/test_tube_renderer.gd" id="1_lthjr"]
 [ext_resource type="Shader" uid="uid://bdd6rhx114n15" path="res://Shaders/TestTubeLiquadColor.gdshader" id="2_sb7us"]
 [ext_resource type="Texture2D" uid="uid://cclne66f1oxgt" path="res://Assets/Art/TestTubeLiquid.png" id="2_stytp"]
 [ext_resource type="PackedScene" uid="uid://ca0cjwsypt5vc" path="res://ExtraScenes/InfoHover.tscn" id="4_sb7us"]
@@ -14,6 +15,7 @@ shader_parameter/tint_color = Color(1, 1, 1, 1)
 size = Vector2(145, 809)
 
 [node name="TestTube" type="Node2D" unique_id=168604631]
+script = ExtResource("1_lthjr")
 
 [node name="TestTubeBottomLayer" type="Sprite2D" parent="." unique_id=1738286690]
 texture = ExtResource("1_6jgwb")

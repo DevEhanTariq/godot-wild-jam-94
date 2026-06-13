@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://calr80v4crctk"]
 
+[ext_resource type="Script" uid="uid://t5jrpkcdbnwi" path="res://ExtraScenes/test_tube_rack.gd" id="1_63n1q"]
 [ext_resource type="Texture2D" uid="uid://bh860ejlsaeqn" path="res://Assets/Art/TestTubeRack.png" id="1_82boo"]
 [ext_resource type="PackedScene" uid="uid://v8hk2y0ur540" path="res://ExtraScenes/TestTubeOutline.tscn" id="2_afmo7"]
 
 [node name="TestTubeRack" type="Node2D" unique_id=1648364924]
+script = ExtResource("1_63n1q")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=737342472]
 texture = ExtResource("1_82boo")
