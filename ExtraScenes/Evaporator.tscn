@@ -14,3 +14,12 @@ region_rect = Rect2(0, 0, 541, 1320)
 
 [node name="TestTubeOutline" parent="." unique_id=398721132 instance=ExtResource("2_0ac2k")]
 position = Vector2(0, -16)
+
+[node name="Button" type="Button" parent="." unique_id=142949985]
+offset_left = 138.00002
+offset_top = -470.00003
+offset_right = 146.00002
+offset_bottom = -462.00003
+scale = Vector2(10, 10)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
