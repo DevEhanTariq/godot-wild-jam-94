@@ -14,9 +14,18 @@ func _on_button_pressed() -> void:
 	var Outline = $Button
 	var TestTube = $TestTube
 	var TestTubeLiquid = $TestTube/TestTubeBottomLayer/Liquid
+	var TestTubeInfo = $TestTube/InfoHover
 	
+	var CX = randf_range(0.0, 1.0)
+	var CY = randf_range(0.0, 1.0)
+	var CZ = randf_range(0.0, 1.0)
+	
+	TestTubeInfo.ChemX = CX
+	TestTubeInfo.ChemY = CY
+	TestTubeInfo.ChemZ = CZ
+		
 	var mat = TestTubeLiquid.material as ShaderMaterial
-	mat.set_shader_parameter("tint_color", Color(randf_range(0.0, 1.0), randf_range(0.0, 1.0), randf_range(0.0, 1.0), 1.0))
+	mat.set_shader_parameter("tint_color", Color(CX, CY, CZ, 1.0))
 	
 	Outline.visible = false
 	TestTube.visible = true

@@ -3,11 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://dda6f6h3ngx5a" path="res://Assets/Art/TestTubeLayer.png" id="1_6jgwb"]
 [ext_resource type="Shader" uid="uid://bdd6rhx114n15" path="res://Shaders/TestTubeLiquadColor.gdshader" id="2_sb7us"]
 [ext_resource type="Texture2D" uid="uid://cclne66f1oxgt" path="res://Assets/Art/TestTubeLiquid.png" id="2_stytp"]
+[ext_resource type="PackedScene" uid="uid://ca0cjwsypt5vc" path="res://ExtraScenes/InfoHover.tscn" id="4_sb7us"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lthjr"]
 resource_local_to_scene = true
 shader = ExtResource("2_sb7us")
 shader_parameter/tint_color = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lthjr"]
+size = Vector2(145, 809)
 
 [node name="TestTube" type="Node2D" unique_id=168604631]
 
@@ -20,3 +24,16 @@ texture = ExtResource("2_stytp")
 
 [node name="TestTubeTopLayer" type="Sprite2D" parent="TestTubeBottomLayer/Liquid" unique_id=114731809]
 texture = ExtResource("1_6jgwb")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=775817702]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1092661665]
+position = Vector2(-1.5, 2.5)
+shape = SubResource("RectangleShape2D_lthjr")
+
+[node name="InfoHover" parent="." unique_id=1545355480 instance=ExtResource("4_sb7us")]
+position = Vector2(-57, -708)
+scale = Vector2(2, 2)
+
+[connection signal="mouse_entered" from="Area2D" to="InfoHover" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="InfoHover" method="_on_area_2d_mouse_exited"]

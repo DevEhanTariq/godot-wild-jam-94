@@ -1,11 +1,28 @@
 extends Node2D
 
+var ChemX: float = 0.0
+var ChemY: float = 0.0
+var ChemZ: float = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	var ChemicalX = $ChemicalX
+	var ChemicalY = $ChemicalY
+	var ChemicalZ = $ChemicalZ
+	
+	ChemicalX.text = "Chemical X: " + str(int(ChemX*100))
+	ChemicalY.text = "Chemical Y: " + str(int(ChemY*100))
+	ChemicalZ.text = "Chemical Z: " + str(int(ChemZ*100))
+
+
+func _on_area_2d_mouse_entered() -> void:
+	visible = true
+
+
+func _on_area_2d_mouse_exited() -> void:
+	visible = false
