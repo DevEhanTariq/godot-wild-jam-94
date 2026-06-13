@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dj0vf6q66bnvu"]
 
 [ext_resource type="Texture2D" uid="uid://dheboowghk82j" path="res://Assets/Art/InfoHover.png" id="1_pohso"]
+[ext_resource type="Script" uid="uid://dxtd5xt08x8e0" path="res://ExtraScenes/inventory.gd" id="1_sxcm0"]
 [ext_resource type="PackedScene" uid="uid://cwi0p3x61bghe" path="res://ExtraScenes/TestTubeRenderer.tscn" id="2_v4278"]
 
 [node name="Inventory" type="Node2D" unique_id=1397416667]
+script = ExtResource("1_sxcm0")
 
 [node name="InfoHover" type="Sprite2D" parent="." unique_id=733496558]
 scale = Vector2(3, 3)
@@ -19,3 +21,12 @@ position = Vector2(-400, 0)
 
 [node name="TestTube4" parent="." unique_id=1722537237 instance=ExtResource("2_v4278")]
 position = Vector2(-600, 0)
+
+[node name="TestTube5" parent="." unique_id=1737174007 instance=ExtResource("2_v4278")]
+position = Vector2(200, 0)
+
+[node name="TestTube6" parent="." unique_id=1857135484 instance=ExtResource("2_v4278")]
+position = Vector2(400, 0)
+
+[node name="TestTube7" parent="." unique_id=1824021367 instance=ExtResource("2_v4278")]
+position = Vector2(600, 0)
