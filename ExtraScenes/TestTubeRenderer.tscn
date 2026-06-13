@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cwi0p3x61bghe"]
 
 [ext_resource type="Texture2D" uid="uid://dda6f6h3ngx5a" path="res://Assets/Art/TestTubeLayer.png" id="1_6jgwb"]
-[ext_resource type="Script" uid="uid://ciydpvemlx2q" path="res://ExtraScenes/TestTubeRendererController.gd" id="1_sb7us"]
 [ext_resource type="Shader" uid="uid://bdd6rhx114n15" path="res://Shaders/TestTubeLiquadColor.gdshader" id="2_sb7us"]
 [ext_resource type="Texture2D" uid="uid://cclne66f1oxgt" path="res://Assets/Art/TestTubeLiquid.png" id="2_stytp"]
 
@@ -9,16 +8,14 @@
 shader = ExtResource("2_sb7us")
 shader_parameter/tint_color = Color(1, 1, 1, 1)
 
-[node name="TestTube" type="Node" unique_id=865289625]
-script = ExtResource("1_sb7us")
-metadata/_edit_horizontal_guides_ = [-573.0]
+[node name="TestTube" type="Node2D" unique_id=168604631]
 
-[node name="TestTubeBottomLayer" type="Sprite2D" parent="." unique_id=654724964]
+[node name="TestTubeBottomLayer" type="Sprite2D" parent="." unique_id=1738286690]
 texture = ExtResource("1_6jgwb")
 
-[node name="Liquid" type="Sprite2D" parent="TestTubeBottomLayer" unique_id=523919205]
+[node name="Liquid" type="Sprite2D" parent="TestTubeBottomLayer" unique_id=1244929987]
 material = SubResource("ShaderMaterial_lthjr")
 texture = ExtResource("2_stytp")
 
-[node name="TestTubeTopLayer" type="Sprite2D" parent="TestTubeBottomLayer/Liquid" unique_id=1408462255]
+[node name="TestTubeTopLayer" type="Sprite2D" parent="TestTubeBottomLayer/Liquid" unique_id=114731809]
 texture = ExtResource("1_6jgwb")

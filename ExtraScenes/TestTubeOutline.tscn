@@ -1,8 +1,17 @@
 [gd_scene format=3 uid="uid://v8hk2y0ur540"]
 
+[ext_resource type="Script" uid="uid://c4ybd86u5s4xk" path="res://ExtraScenes/test_tube_outline.gd" id="1_ab50o"]
 [ext_resource type="Texture2D" uid="uid://bydb5p5pxhclm" path="res://Assets/Art/TestTubeOutline.png" id="1_c8gxo"]
 
-[node name="TestTubeOutline" type="Node" unique_id=445535177]
+[node name="TestTubeOutline" type="Node2D" unique_id=398721132]
+script = ExtResource("1_ab50o")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1970120611]
-texture = ExtResource("1_c8gxo")
+[node name="Button" type="Button" parent="." unique_id=1013150596]
+offset_left = -129.0
+offset_top = -432.0
+offset_right = 129.0
+offset_bottom = 432.0
+icon = ExtResource("1_c8gxo")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
