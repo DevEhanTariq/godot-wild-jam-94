@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dh7i3arh7e1sg"]
+
+[ext_resource type="Texture2D" uid="uid://bxt06p3i1sw6y" path="res://Assets/Art/Machines.png" id="1_s8fpb"]
+
+[node name="Evaporator" type="Node2D" unique_id=986601852]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=547874656]
+texture = ExtResource("1_s8fpb")
+region_enabled = true
+region_rect = Rect2(0, 0, 541, 1320)

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c2pjwtub2fw8e"]
+
+[ext_resource type="Texture2D" uid="uid://bxt06p3i1sw6y" path="res://Assets/Art/Machines.png" id="1_xlg7d"]
+
+[node name="Mixer" type="Node2D" unique_id=980892426]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1928426679]
+texture = ExtResource("1_xlg7d")
+region_enabled = true
+region_rect = Rect2(541, 0, 882, 1320)

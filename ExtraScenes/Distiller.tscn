@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://wbep5vjrcadx"]
+
+[ext_resource type="Texture2D" uid="uid://bxt06p3i1sw6y" path="res://Assets/Art/Machines.png" id="1_a3enr"]
+
+[node name="Distiller" type="Node2D" unique_id=5187908]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=969297244]
+texture = ExtResource("1_a3enr")
+region_enabled = true
+region_rect = Rect2(1423, 0, 1764, 1320)
