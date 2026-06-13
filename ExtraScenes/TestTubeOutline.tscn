@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c4ybd86u5s4xk" path="res://ExtraScenes/test_tube_outline.gd" id="1_ab50o"]
 [ext_resource type="Texture2D" uid="uid://bydb5p5pxhclm" path="res://Assets/Art/TestTubeOutline.png" id="1_c8gxo"]
+[ext_resource type="PackedScene" uid="uid://cwi0p3x61bghe" path="res://ExtraScenes/TestTubeRenderer.tscn" id="3_ci801"]
 
 [node name="TestTubeOutline" type="Node2D" unique_id=398721132]
 script = ExtResource("1_ab50o")
@@ -13,5 +14,9 @@ offset_right = 129.0
 offset_bottom = 432.0
 icon = ExtResource("1_c8gxo")
 flat = true
+
+[node name="TestTube" parent="." unique_id=168604631 instance=ExtResource("3_ci801")]
+visible = false
+position = Vector2(-2, -10)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

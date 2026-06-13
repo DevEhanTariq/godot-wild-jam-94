@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cclne66f1oxgt" path="res://Assets/Art/TestTubeLiquid.png" id="2_stytp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lthjr"]
+resource_local_to_scene = true
 shader = ExtResource("2_sb7us")
 shader_parameter/tint_color = Color(1, 1, 1, 1)
 

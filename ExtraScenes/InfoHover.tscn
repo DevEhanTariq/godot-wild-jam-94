@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ca0cjwsypt5vc"]
+
+[node name="InfoHover" type="Node2D" unique_id=1545355480]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=147396572]
