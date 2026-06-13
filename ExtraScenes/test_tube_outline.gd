@@ -11,17 +11,18 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	var Outline = $Button
-	var TestTube = $TestTube
+	if len(Global.TestTubes) != 0:
+		var Outline = $Button
+		var TestTube = $TestTube
 	
-	var localInventory = get_parent()
-	localInventory.TestTubes.append(Global.TestTubes[Global.Selected])
-	Global.RemoveTestTube()
+		var localInventory = get_parent()
+		localInventory.TestTubes.append(Global.TestTubes[Global.Selected])
+		Global.RemoveTestTube()
 	
-	TestTube.CX = localInventory.TestTubes[-1][0]
-	TestTube.CY = localInventory.TestTubes[-1][1]
-	TestTube.CZ = localInventory.TestTubes[-1][2]
+		TestTube.CX = localInventory.TestTubes[-1][0]
+		TestTube.CY = localInventory.TestTubes[-1][1]
+		TestTube.CZ = localInventory.TestTubes[-1][2]
 	
 	
-	Outline.visible = false
-	TestTube.visible = true
+		Outline.visible = false
+		TestTube.visible = true

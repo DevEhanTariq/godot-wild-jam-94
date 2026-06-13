@@ -1,10 +1,19 @@
 [gd_scene format=3 uid="uid://c2pjwtub2fw8e"]
 
 [ext_resource type="Texture2D" uid="uid://bxt06p3i1sw6y" path="res://Assets/Art/Machines.png" id="1_xlg7d"]
+[ext_resource type="Script" uid="uid://eb6q8vntplql" path="res://ExtraScenes/mixer.gd" id="1_ydt57"]
+[ext_resource type="PackedScene" uid="uid://v8hk2y0ur540" path="res://ExtraScenes/TestTubeOutline.tscn" id="2_al4wj"]
 
 [node name="Mixer" type="Node2D" unique_id=980892426]
+script = ExtResource("1_ydt57")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1928426679]
 texture = ExtResource("1_xlg7d")
 region_enabled = true
 region_rect = Rect2(541, 0, 882, 1320)
+
+[node name="TestTubeOutline" parent="." unique_id=398721132 instance=ExtResource("2_al4wj")]
+position = Vector2(-170, 178)
+
+[node name="TestTubeOutline2" parent="." unique_id=11338475 instance=ExtResource("2_al4wj")]
+position = Vector2(171, 177)

@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://dh7i3arh7e1sg"]
 
-[ext_resource type="Texture2D" uid="uid://bxt06p3i1sw6y" path="res://Assets/Art/Machines.png" id="1_s8fpb"]
+[ext_resource type="Script" uid="uid://cyo5jjtqy4kqr" path="res://ExtraScenes/evaporator.gd" id="1_0ac2k"]
+[ext_resource type="Texture2D" uid="uid://bxt06p3i1sw6y" path="res://Assets/Art/Machines.png" id="1_4xkhs"]
+[ext_resource type="PackedScene" uid="uid://v8hk2y0ur540" path="res://ExtraScenes/TestTubeOutline.tscn" id="2_0ac2k"]
 
 [node name="Evaporator" type="Node2D" unique_id=986601852]
+script = ExtResource("1_0ac2k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=547874656]
-texture = ExtResource("1_s8fpb")
+texture = ExtResource("1_4xkhs")
 region_enabled = true
 region_rect = Rect2(0, 0, 541, 1320)
+
+[node name="TestTubeOutline" parent="." unique_id=398721132 instance=ExtResource("2_0ac2k")]
+position = Vector2(0, -16)
