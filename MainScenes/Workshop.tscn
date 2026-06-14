@@ -4,14 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://c2pjwtub2fw8e" path="res://ExtraScenes/Mixer.tscn" id="2_0ds5k"]
 [ext_resource type="PackedScene" uid="uid://dh7i3arh7e1sg" path="res://ExtraScenes/Evaporator.tscn" id="3_eveyy"]
 [ext_resource type="PackedScene" uid="uid://wbep5vjrcadx" path="res://ExtraScenes/Distiller.tscn" id="4_srjkd"]
+[ext_resource type="PackedScene" uid="uid://4qgc87cmh78y" path="res://ExtraScenes/Trash.tscn" id="5_eveyy"]
 
 [node name="Node" type="Node" unique_id=980191888]
 
-[node name="TestTubeRack" parent="." unique_id=1648364924 instance=ExtResource("1_464uu")]
-position = Vector2(-2240, 1208)
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=358243922]
 zoom = Vector2(0.2, 0.2)
+
+[node name="TestTubeRack" parent="." unique_id=1648364924 instance=ExtResource("1_464uu")]
+position = Vector2(-2240, 1208)
 
 [node name="Mixer" parent="." unique_id=980892426 instance=ExtResource("2_0ds5k")]
 position = Vector2(-167, 943)
@@ -21,3 +22,6 @@ position = Vector2(647, 953)
 
 [node name="Distiller" parent="." unique_id=5187908 instance=ExtResource("4_srjkd")]
 position = Vector2(1911, 951)
+
+[node name="Trash" parent="." unique_id=133999584 instance=ExtResource("5_eveyy")]
+position = Vector2(-2802, 28)

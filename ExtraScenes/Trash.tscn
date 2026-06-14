@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://4qgc87cmh78y"]
+
+[ext_resource type="Script" uid="uid://cgm7nibaj0fhs" path="res://trash.gd" id="1_yorhv"]
+
+[node name="Trash" type="Node2D" unique_id=133999584]
+script = ExtResource("1_yorhv")
+
+[node name="Button" type="Button" parent="." unique_id=1697480582]
+offset_right = 169.0
+offset_bottom = 179.0
+text = "Trash"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
