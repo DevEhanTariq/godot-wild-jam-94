@@ -16,10 +16,10 @@ region_rect = Rect2(1423, 0, 1764, 1320)
 position = Vector2(614, -15)
 
 [node name="TestTubeOutline2" parent="." unique_id=1967100351 instance=ExtResource("2_7wtvf")]
-position = Vector2(-269, 176)
+position = Vector2(-612, 176)
 
 [node name="TestTubeOutline3" parent="." unique_id=2133590383 instance=ExtResource("2_7wtvf")]
-position = Vector2(-612, 176)
+position = Vector2(-269, 176)
 
 [node name="TestTubeOutline4" parent="." unique_id=728456353 instance=ExtResource("2_7wtvf")]
 position = Vector2(72, 178)

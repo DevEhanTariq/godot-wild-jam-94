@@ -12,45 +12,47 @@ func _process(delta: float) -> void:
 	print(len(TestTubes))
 
 func _on_button_pressed() -> void:
-	var TubeX = $TestTubeOutline3
-	var OutTubeX = $TestTubeOutline3/TestTube
-	var TubeY = $TestTubeOutline2
-	var OutTubeY = $TestTubeOutline2/TestTube
-	var TubeZ = $TestTubeOutline4
-	var OutTubeZ = $TestTubeOutline4/TestTube
 	var InTube = $TestTubeOutline/TestTube
 	
-	TestTubes = []
+	var TubeX = $TestTubeOutline2
+	var TubeY = $TestTubeOutline3
+	var TubeZ = $TestTubeOutline4
+
+	if InTube.visible and (not $TestTubeOutline2/TestTube.visible) and (not $TestTubeOutline3/TestTube.visible) and (not $TestTubeOutline4/TestTube.visible):
 	
-	TubeX.delete = false
-	TubeX.distill = true
-	TubeX._on_button_pressed()
-	OutTubeX.CX = InTube.CX
-	OutTubeX.CY = 0.0
-	OutTubeX.CZ = 0.0
-	TestTubes.append([OutTubeX.CX, OutTubeX.CY, OutTubeX.CZ])
+		var ChemX = [InTube.CX, 0.0, 0.0]
+		var ChemY = [0.0, InTube.CY, 0.0]
+		var ChemZ = [0.0, 0.0, InTube.CZ]
 	
-	TubeY.delete = false
-	TubeY.distill = true
-	TubeY._on_button_pressed()
-	OutTubeY.CX = 0.0
-	OutTubeY.CY = InTube.CY
-	OutTubeY.CZ = 0.0
-	TestTubes.append([OutTubeY.CX, OutTubeY.CY, OutTubeY.CZ])
+		TubeX.CX = ChemX[0]
+		TubeX.CY = ChemX[1]
+		TubeX.CZ = ChemX[2]
 	
-	TubeZ.delete = false
-	TubeZ.distill = true
-	TubeZ._on_button_pressed()
-	OutTubeZ.CX = 0.0
-	OutTubeZ.CY = 0.0
-	OutTubeZ.CZ = InTube.CZ
-	TestTubes.append([OutTubeZ.CX, OutTubeZ.CY, OutTubeZ.CZ])
+		TubeY.CX = ChemY[0]
+		TubeY.CY = ChemY[1]
+		TubeY.CZ = ChemY[2]
 	
-	InTube.CX = 0.0
-	InTube.CY = 0.0
-	InTube.CZ = 0.0
-	TestTubes.append([InTube.CX, InTube.CY, InTube.CZ])
+		TubeZ.CX = ChemZ[0]
+		TubeZ.CY = ChemZ[1]
+		TubeZ.CZ = ChemZ[2]
 	
-	TubeX.delete = true
-	TubeY.delete = true
-	TubeZ.delete = true
+		TubeX.distill = true
+		TubeY.distill = true
+		TubeZ.distill = true
+	
+		TubeX._on_button_pressed()
+		TubeY._on_button_pressed()
+		TubeZ._on_button_pressed()
+	
+		TubeX.distill = false
+		TubeY.distill = false
+		TubeZ.distill = false
+	
+		TestTubes.erase([InTube.CX, InTube.CY, InTube.CZ])
+		InTube.CX = 0.0
+		InTube.CY = 0.0
+		InTube.CZ = 0.0
+		TestTubes.append([0.0, 0.0, 0.0])
+
+	if (not InTube.visible) and ($TestTubeOutline2/TestTube.visible) and ($TestTubeOutline3/TestTube.visible) and ($TestTubeOutline4/TestTube.visible):
+		pass

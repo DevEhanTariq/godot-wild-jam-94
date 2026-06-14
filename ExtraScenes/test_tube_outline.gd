@@ -1,7 +1,10 @@
 extends Node2D
 
-var delete = true
 var distill = false
+
+var CX = 0.0
+var CY = 0.0
+var CZ = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,5 +37,13 @@ func _on_button_pressed() -> void:
 	if distill:
 		var Outline = $Button
 		var TestTube = $TestTube
+		var localInventory = get_parent()
+		
+		localInventory.TestTubes.append([CX,CY,CZ])
+		
+		TestTube.CX = localInventory.TestTubes[-1][0]
+		TestTube.CY = localInventory.TestTubes[-1][1]
+		TestTube.CZ = localInventory.TestTubes[-1][2]
+		
 		Outline.visible = false
 		TestTube.visible = true
