@@ -22,21 +22,31 @@ func _on_button_pressed() -> void:
 	var InTube = $TestTubeOutline/TestTube
 	
 	TubeX.delete = false
+	TubeX.distill = true
 	TubeX._on_button_pressed()
 	OutTubeX.CX = InTube.CX
 	OutTubeX.CY = 0.0
 	OutTubeX.CZ = 0.0
+	TestTubes.append([OutTubeX.CX, OutTubeX.CY, OutTubeX.CZ, len(TestTubes)])
 	
 	TubeY.delete = false
+	TubeY.distill = true
 	TubeY._on_button_pressed()
 	OutTubeY.CX = 0.0
 	OutTubeY.CY = InTube.CY
 	OutTubeY.CZ = 0.0
+	TestTubes.append([OutTubeY.CX, OutTubeY.CY, OutTubeY.CZ, len(TestTubes)])
 	
 	TubeZ.delete = false
+	TubeZ.distill = true
 	TubeZ._on_button_pressed()
 	OutTubeZ.CX = 0.0
 	OutTubeZ.CY = 0.0
 	OutTubeZ.CZ = InTube.CZ
+	TestTubes.append([OutTubeZ.CX, OutTubeZ.CY, OutTubeZ.CZ, len(TestTubes)])
 	
-	InTube.Opac = 0.0
+	InTube.CX = 0.0
+	InTube.CY = 0.0
+	InTube.CZ = 0.0
+	TestTubes.remove_at(0)
+	TestTubes.append([InTube.CX, InTube.CY, InTube.CZ, len(TestTubes)])
