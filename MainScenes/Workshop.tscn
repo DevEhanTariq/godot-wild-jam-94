@@ -6,15 +6,23 @@
 [ext_resource type="PackedScene" uid="uid://dh7i3arh7e1sg" path="res://ExtraScenes/Evaporator.tscn" id="3_eveyy"]
 [ext_resource type="PackedScene" uid="uid://wbep5vjrcadx" path="res://ExtraScenes/Distiller.tscn" id="4_srjkd"]
 [ext_resource type="PackedScene" uid="uid://4qgc87cmh78y" path="res://ExtraScenes/Trash.tscn" id="5_eveyy"]
+[ext_resource type="Texture2D" uid="uid://co565bnbqegg8" path="res://Assets/Art/Reset.png" id="7_1wc7g"]
 
 [node name="Node" type="Node" unique_id=980191888]
 script = ExtResource("1_srjkd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=358243922]
-zoom = Vector2(0.2, 0.2)
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(0.4, 0.4)
 
 [node name="TestTubeRack" parent="." unique_id=1648364924 instance=ExtResource("1_464uu")]
 position = Vector2(-2240, 1208)
+
+[node name="TestTubeRack2" parent="." unique_id=118187671 instance=ExtResource("1_464uu")]
+position = Vector2(-2230, 132)
+
+[node name="TestTubeRack3" parent="." unique_id=1784929383 instance=ExtResource("1_464uu")]
+position = Vector2(-2185, -1050)
 
 [node name="Mixer" parent="." unique_id=980892426 instance=ExtResource("2_0ds5k")]
 position = Vector2(-167, 943)
@@ -26,13 +34,14 @@ position = Vector2(647, 953)
 position = Vector2(1911, 951)
 
 [node name="Trash" parent="." unique_id=133999584 instance=ExtResource("5_eveyy")]
-position = Vector2(-2802, 28)
+position = Vector2(-1134, -988)
 
 [node name="Button" type="Button" parent="." unique_id=184228187]
-offset_left = 2441.0
-offset_top = -1437.0
-offset_right = 2755.0
-offset_bottom = -1240.0
-text = "Reset"
+offset_left = 2361.0
+offset_top = -1530.0
+offset_right = 2769.0
+offset_bottom = -1122.0
+icon = ExtResource("7_1wc7g")
+flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
