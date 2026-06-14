@@ -5,6 +5,7 @@
 [ext_resource type="Shader" uid="uid://bdd6rhx114n15" path="res://Shaders/TestTubeLiquadColor.gdshader" id="2_sb7us"]
 [ext_resource type="Texture2D" uid="uid://cclne66f1oxgt" path="res://Assets/Art/TestTubeLiquid.png" id="2_stytp"]
 [ext_resource type="PackedScene" uid="uid://ca0cjwsypt5vc" path="res://ExtraScenes/InfoHover.tscn" id="4_sb7us"]
+[ext_resource type="Texture2D" uid="uid://bydb5p5pxhclm" path="res://Assets/Art/TestTubeOutline.png" id="5_x3g1i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lthjr"]
 resource_local_to_scene = true
@@ -26,6 +27,13 @@ texture = ExtResource("2_stytp")
 
 [node name="TestTubeTopLayer" type="Sprite2D" parent="TestTubeBottomLayer/Liquid" unique_id=114731809]
 texture = ExtResource("1_6jgwb")
+region_rect = Rect2(147.3833, 790.6655, 12.553711, 84.73755)
+
+[node name="Outline" type="Sprite2D" parent="TestTubeBottomLayer/Liquid/TestTubeTopLayer" unique_id=312835990]
+visible = false
+position = Vector2(3.0000002, -0.9999956)
+scale = Vector2(0.97, 0.97)
+texture = ExtResource("5_x3g1i")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=775817702]
 
@@ -38,5 +46,8 @@ visible = false
 position = Vector2(-57, -708)
 scale = Vector2(2, 2)
 
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="Area2D" to="InfoHover" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_exited" from="Area2D" to="InfoHover" method="_on_area_2d_mouse_exited"]
