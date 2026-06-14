@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://db6xpf45qwui5"]
 
 [ext_resource type="PackedScene" uid="uid://calr80v4crctk" path="res://ExtraScenes/TestTubeRack.tscn" id="1_464uu"]
+[ext_resource type="Script" uid="uid://llo1gxs63wdy" path="res://MainScenes/workshop.gd" id="1_srjkd"]
 [ext_resource type="PackedScene" uid="uid://c2pjwtub2fw8e" path="res://ExtraScenes/Mixer.tscn" id="2_0ds5k"]
 [ext_resource type="PackedScene" uid="uid://dh7i3arh7e1sg" path="res://ExtraScenes/Evaporator.tscn" id="3_eveyy"]
 [ext_resource type="PackedScene" uid="uid://wbep5vjrcadx" path="res://ExtraScenes/Distiller.tscn" id="4_srjkd"]
 [ext_resource type="PackedScene" uid="uid://4qgc87cmh78y" path="res://ExtraScenes/Trash.tscn" id="5_eveyy"]
 
 [node name="Node" type="Node" unique_id=980191888]
+script = ExtResource("1_srjkd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=358243922]
 zoom = Vector2(0.2, 0.2)
@@ -25,3 +27,12 @@ position = Vector2(1911, 951)
 
 [node name="Trash" parent="." unique_id=133999584 instance=ExtResource("5_eveyy")]
 position = Vector2(-2802, 28)
+
+[node name="Button" type="Button" parent="." unique_id=184228187]
+offset_left = 2441.0
+offset_top = -1437.0
+offset_right = 2755.0
+offset_bottom = -1240.0
+text = "Reset"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

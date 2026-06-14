@@ -22,8 +22,7 @@ func _on_button_pressed() -> void:
 		
 			localInventory.TestTubes.append(Global.TestTubes[Global.Selected])
 		
-			if delete:
-				Global.RemoveTestTube()
+			Global.RemoveTestTube()
 	
 			TestTube.CX = localInventory.TestTubes[-1][0]
 			TestTube.CY = localInventory.TestTubes[-1][1]

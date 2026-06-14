@@ -15,6 +15,6 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	var Chemical = $TestTubeOutline/TestTube
-	Chemical.CX = Chemical.CX*0.8
-	Chemical.CY = Chemical.CY*0.8
-	Chemical.CZ = Chemical.CZ*0.8
+	Chemical.CX = Chemical.CX*0.9
+	Chemical.CY = Chemical.CY*0.9
+	Chemical.CZ = Chemical.CZ*0.9
