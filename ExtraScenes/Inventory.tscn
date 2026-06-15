@@ -1,8 +1,19 @@
 [gd_scene format=3 uid="uid://b8tehmyl1nsx8"]
 
 [ext_resource type="Texture2D" uid="uid://cysc8sdsbftk4" path="res://Assets/Art/Inventory.png" id="1_psxal"]
+[ext_resource type="Script" uid="uid://dxtd5xt08x8e0" path="res://ExtraScenes/inventory.gd" id="1_v4278"]
 
 [node name="Inventory" type="Node2D" unique_id=350680831]
+script = ExtResource("1_v4278")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=139809385]
 texture = ExtResource("1_psxal")
+
+[node name="Button" type="Button" parent="." unique_id=511667636]
+offset_left = -1994.0
+offset_top = -987.0
+offset_right = 1998.0
+offset_bottom = 999.0
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
