@@ -20,7 +20,12 @@ var Zhig = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-
+	
+func CheckWin():
+	var outline = $TestTubeOutline/TestTube
+	if (outline.CX >= Xlow/100 and outline.CX <= Xhig/100) and (outline.CY >= Ylow/100 and outline.CY <= Yhig/100) and (outline.CZ >= Zlow/100 and outline.CZ <= Zhig/100):
+		get_parent().win = true
+		
 func delete():
 	for j in InvTubes:
 		remove_child(j)
@@ -57,3 +62,7 @@ func _on_button_pressed() -> void:
 	else:
 		position.y = -2500
 		down = true
+
+
+func _on_button_2_pressed() -> void:
+	CheckWin()
