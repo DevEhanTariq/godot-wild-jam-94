@@ -1,12 +1,9 @@
-extends Node
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.TestTubes = []
-	Global.TestTubes.append([1.0,1.0,1.0])
-	Global.TestTubes.append([0.0,0.0,0.0])
-
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,5 +11,9 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_button_pressed() -> void:
-	get_tree().reload_current_scene()
+func _on_workshop_pressed() -> void:
+	position.x = 0
+
+
+func _on_storage_pressed() -> void:
+	position.x = 2304 * 2.5

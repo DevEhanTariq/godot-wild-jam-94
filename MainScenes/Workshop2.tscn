@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ddxrrh0r5mjcg"]
+
+[ext_resource type="Script" uid="uid://vh0qkpwtl4kt" path="res://MainScenes/workshop_2.gd" id="1_qdre8"]
+[ext_resource type="PackedScene" uid="uid://calr80v4crctk" path="res://ExtraScenes/TestTubeRack.tscn" id="2_sat8w"]
+[ext_resource type="PackedScene" uid="uid://dh7i3arh7e1sg" path="res://ExtraScenes/Evaporator.tscn" id="4_avnkj"]
+[ext_resource type="PackedScene" uid="uid://4qgc87cmh78y" path="res://ExtraScenes/Trash.tscn" id="6_rfg1f"]
+[ext_resource type="Texture2D" uid="uid://co565bnbqegg8" path="res://Assets/Art/Reset.png" id="7_n44qa"]
+
+[node name="Node" type="Node" unique_id=980191888]
+script = ExtResource("1_qdre8")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=363873123]
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(0.4, 0.4)
+
+[node name="TestTubeRack" parent="." unique_id=1648364924 instance=ExtResource("2_sat8w")]
+position = Vector2(-1422, 1197)
+
+[node name="Evaporator" parent="." unique_id=986601852 instance=ExtResource("4_avnkj")]
+position = Vector2(1106, 959)
+
+[node name="Trash" parent="." unique_id=133999584 instance=ExtResource("6_rfg1f")]
+position = Vector2(-2618, -1411)
+
+[node name="Button" type="Button" parent="." unique_id=184228187]
+offset_left = 2361.0
+offset_top = -1530.0
+offset_right = 2769.0
+offset_bottom = -1122.0
+icon = ExtResource("7_n44qa")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
