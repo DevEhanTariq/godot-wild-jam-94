@@ -16,6 +16,7 @@ shader_parameter/tint_color = Color(1, 1, 1, 1)
 size = Vector2(145, 809)
 
 [node name="TestTube" type="Node2D" unique_id=168604631]
+process_priority = -1
 script = ExtResource("1_lthjr")
 
 [node name="TestTubeBottomLayer" type="Sprite2D" parent="." unique_id=1738286690]

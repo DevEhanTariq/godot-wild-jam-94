@@ -7,7 +7,7 @@ var Opac = 1.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,9 +34,10 @@ func _on_area_2d_mouse_exited() -> void:
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			var CurrentInv = get_parent().get_parent()
-			CurrentInv.TestTubes.erase([CX,CY,CZ])
-			Global.TestTubes.append([CX, CY, CZ])
-			get_parent().visible = true
-			get_parent().get_child(0).visible = true
-			visible = false
+			if not Global.Full:
+				var CurrentInv = get_parent().get_parent()
+				CurrentInv.TestTubes.erase([CX,CY,CZ])
+				Global.TestTubes.append([CX, CY, CZ])
+				get_parent().visible = true
+				get_parent().get_child(0).visible = true
+				visible = false

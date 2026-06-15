@@ -2,6 +2,7 @@ extends Node
 
 var TestTubes = []
 var Selected = 0
+var Full = false
 
 func RemoveTestTube():
 	Global.TestTubes.remove_at(Selected)
@@ -12,4 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if len(TestTubes) >= 1:
+		Global.Full = true
+	else:
+		Global.Full = false

@@ -2,6 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://cysc8sdsbftk4" path="res://Assets/Art/Inventory.png" id="1_psxal"]
 [ext_resource type="Script" uid="uid://dxtd5xt08x8e0" path="res://ExtraScenes/inventory.gd" id="1_v4278"]
+[ext_resource type="PackedScene" uid="uid://v8hk2y0ur540" path="res://ExtraScenes/TestTubeOutline.tscn" id="3_sxcm0"]
+[ext_resource type="FontFile" uid="uid://jfl58k3vrepm" path="res://Assets/Fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf" id="4_qa78c"]
+[ext_resource type="Texture2D" uid="uid://bryees3511brp" path="res://Assets/Art/Reaction.png" id="5_2c5ug"]
+[ext_resource type="PackedScene" uid="uid://cwi0p3x61bghe" path="res://ExtraScenes/TestTubeRenderer.tscn" id="6_d0bsc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2c5ug"]
+load_path = "res://.godot/imported/InfoHover.png-12c095eb37385a82296857694f8dfee8.ctex"
 
 [node name="Inventory" type="Node2D" unique_id=350680831]
 script = ExtResource("1_v4278")
@@ -15,5 +22,76 @@ offset_top = -987.0
 offset_right = 1998.0
 offset_bottom = 999.0
 flat = true
+
+[node name="TestTubeOutline" parent="." unique_id=398721132 instance=ExtResource("3_sxcm0")]
+position = Vector2(1475, 400)
+
+[node name="InfoHover" type="Sprite2D" parent="." unique_id=33221345]
+position = Vector2(1600, -300)
+texture = SubResource("CompressedTexture2D_2c5ug")
+
+[node name="ChemicalX" type="Label" parent="InfoHover" unique_id=1457180573]
+anchors_preset = -1
+anchor_right = 0.26666668
+offset_left = -300.0
+offset_top = -170.0
+offset_right = 140.0
+offset_bottom = -75.0
+theme_override_fonts/font = ExtResource("4_qa78c")
+theme_override_font_sizes/font_size = 64
+text = "30 < X < 80"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ChemicalY" type="Label" parent="InfoHover" unique_id=1480244658]
+anchors_preset = -1
+anchor_left = -0.08
+anchor_right = 0.8283333
+offset_left = -250.0
+offset_top = -85.0
+offset_right = -200.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("4_qa78c")
+theme_override_font_sizes/font_size = 64
+text = "50 < Y < 60"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ChemicalZ" type="Label" parent="InfoHover" unique_id=1503493762]
+anchors_preset = -1
+anchor_left = -0.08166666
+anchor_right = 0.8383333
+offset_left = -250.0
+offset_top = -4.0
+offset_right = -204.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("4_qa78c")
+theme_override_font_sizes/font_size = 64
+text = "20 < Z < 30"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="." unique_id=1738205474]
+offset_left = 1661.0
+offset_top = 18.0
+offset_right = 2069.0
+offset_bottom = 426.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("5_2c5ug")
+flat = true
+
+[node name="Label" type="Label" parent="." unique_id=1493061439]
+offset_left = -1851.0
+offset_top = -555.0
+offset_right = -1065.0
+offset_bottom = -222.0
+theme_override_fonts/font = ExtResource("4_qa78c")
+theme_override_font_sizes/font_size = 128
+text = "Inventory:"
+
+[node name="TestTube" parent="." unique_id=168604631 instance=ExtResource("6_d0bsc")]
+position = Vector2(-1506, -1556)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
