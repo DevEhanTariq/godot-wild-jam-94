@@ -14,7 +14,11 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	var fire = $Fire
+	fire.burn = true
+	await get_tree().create_timer(2).timeout
 	var Chemical = $TestTubeOutline/TestTube
 	Chemical.CX = Chemical.CX*0.9
 	Chemical.CY = Chemical.CY*0.9
 	Chemical.CZ = Chemical.CZ*0.9
+	fire.burn = false

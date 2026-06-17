@@ -18,15 +18,14 @@ colors = PackedColorArray(0.89411765, 0.9411765, 0.9098039, 1, 0.21568628, 1, 0.
 script = ExtResource("1_38h0t")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1387940909]
-amount = 2000
-lifetime = 0.4
+amount = 4000
 emission_shape = 1
-emission_sphere_radius = 10.0
+emission_sphere_radius = 40.0
 gravity = Vector2(0, -600)
 radial_accel_min = -50.0
 radial_accel_max = -40.0
-scale_amount_min = 2.0
-scale_amount_max = 2.0
+scale_amount_min = 4.0
+scale_amount_max = 4.0
 split_scale = true
 scale_curve_x = SubResource("Curve_hys2s")
 scale_curve_y = SubResource("Curve_4gi88")

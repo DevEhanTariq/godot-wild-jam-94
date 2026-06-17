@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bxt06p3i1sw6y" path="res://Assets/Art/Machines.png" id="1_4xkhs"]
 [ext_resource type="PackedScene" uid="uid://v8hk2y0ur540" path="res://ExtraScenes/TestTubeOutline.tscn" id="2_0ac2k"]
 [ext_resource type="Texture2D" uid="uid://bryees3511brp" path="res://Assets/Art/Reaction.png" id="4_go87q"]
+[ext_resource type="PackedScene" uid="uid://de037uwlmpeak" path="res://ExtraScenes/Fire.tscn" id="5_ywtru"]
 
 [node name="Evaporator" type="Node2D" unique_id=986601852]
 script = ExtResource("1_0ac2k")
@@ -24,5 +25,8 @@ offset_bottom = -195.0
 scale = Vector2(0.5, 0.5)
 icon = ExtResource("4_go87q")
 flat = true
+
+[node name="Fire" parent="." unique_id=1416180241 instance=ExtResource("5_ywtru")]
+position = Vector2(0, 475)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
