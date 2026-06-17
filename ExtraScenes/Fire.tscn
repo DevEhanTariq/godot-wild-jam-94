@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://de037uwlmpeak"]
+
+[ext_resource type="Script" uid="uid://decb8irep6ich" path="res://ExtraScenes/fire.gd" id="1_38h0t"]
+
+[sub_resource type="Curve" id="Curve_hys2s"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_4gi88"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_qqdig"]
+offsets = PackedFloat32Array(0, 0.48765433, 0.8703704)
+colors = PackedColorArray(0.89411765, 0.9411765, 0.9098039, 1, 0.21568628, 1, 0.9137255, 1, 0.21568628, 0.5885764, 0.9137255, 1)
+
+[node name="Fire" type="Node2D" unique_id=1416180241]
+script = ExtResource("1_38h0t")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1387940909]
+amount = 2000
+lifetime = 0.4
+emission_shape = 1
+emission_sphere_radius = 10.0
+gravity = Vector2(0, -600)
+radial_accel_min = -50.0
+radial_accel_max = -40.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+split_scale = true
+scale_curve_x = SubResource("Curve_hys2s")
+scale_curve_y = SubResource("Curve_4gi88")
+color_ramp = SubResource("Gradient_qqdig")

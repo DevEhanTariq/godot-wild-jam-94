@@ -3,6 +3,7 @@ extends Node
 var TestTubes = []
 var Selected = 0
 var Full = false
+var level = 1
 
 func RemoveTestTube():
 	Global.TestTubes.remove_at(Selected)

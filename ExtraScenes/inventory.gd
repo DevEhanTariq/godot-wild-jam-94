@@ -25,6 +25,7 @@ func CheckWin():
 	var outline = $TestTubeOutline/TestTube
 	if (outline.CX >= Xlow/100 and outline.CX <= Xhig/100) and (outline.CY >= Ylow/100 and outline.CY <= Yhig/100) and (outline.CZ >= Zlow/100 and outline.CZ <= Zhig/100):
 		get_parent().win = true
+		Global.level += 1
 		
 func delete():
 	for j in InvTubes:
