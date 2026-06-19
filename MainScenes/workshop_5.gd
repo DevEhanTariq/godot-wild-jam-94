@@ -2,14 +2,14 @@ extends Node
 
 var win = false
 
-var Xlow = 0
-var Xhig = 90
+var Xlow = 100
+var Xhig = 100
 	
-var Ylow = 0
-var Yhig = 90
-	
+var Ylow = 100
+var Yhig = 100
+
 var Zlow = 0
-var Zhig = 90
+var Zhig = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

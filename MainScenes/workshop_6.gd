@@ -2,13 +2,13 @@ extends Node
 
 var win = false
 
-var Xlow = 0
+var Xlow = 50
 var Xhig = 90
 	
-var Ylow = 0
-var Yhig = 90
-	
-var Zlow = 0
+var Ylow = 90
+var Yhig = 100
+
+var Zlow = 50
 var Zhig = 90
 
 # Called when the node enters the scene tree for the first time.
@@ -20,9 +20,9 @@ func _ready() -> void:
 	
 	######################################
 	
-	Tube1.CX = 1.0
-	Tube1.CY = 1.0
-	Tube1.CZ = 1.0
+	Tube1.CX = randf_range(0.91, 1.0)
+	Tube1.CY = randf_range(0.9, 1.0)
+	Tube1.CZ = randf_range(0.91, 1.0)
 	
 	Tube1.distill = true
 	Tube1._on_button_pressed()
