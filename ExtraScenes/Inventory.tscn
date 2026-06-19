@@ -73,15 +73,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Button2" type="Button" parent="." unique_id=1738205474]
-offset_left = 1661.0
-offset_top = 18.0
-offset_right = 2069.0
-offset_bottom = 426.0
-scale = Vector2(0.5, 0.5)
-icon = ExtResource("5_2c5ug")
-flat = true
-
 [node name="Label" type="Label" parent="." unique_id=1493061439]
 offset_left = -1851.0
 offset_top = -555.0
@@ -90,6 +81,18 @@ offset_bottom = -222.0
 theme_override_fonts/font = ExtResource("4_qa78c")
 theme_override_font_sizes/font_size = 128
 text = "Inventory:"
+
+[node name="Button2" type="Button" parent="." unique_id=1738205474]
+process_priority = 1
+z_index = 10
+z_as_relative = false
+offset_left = 1661.0
+offset_top = 18.0
+offset_right = 2069.0
+offset_bottom = 426.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("5_2c5ug")
+flat = true
 
 [node name="TestTube" parent="." unique_id=168604631 instance=ExtResource("6_d0bsc")]
 position = Vector2(-1506, -1556)

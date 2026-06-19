@@ -2,6 +2,15 @@ extends Node
 
 var win = false
 
+var Xlow = 10
+var Xhig = 90
+	
+var Ylow = 10
+var Yhig = 80
+	
+var Zlow = 10
+var Zhig = 90
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.TestTubes = []
@@ -42,16 +51,6 @@ func _ready() -> void:
 	######################################
 	######################################
 	
-	var Inv = $Inventory
-	Inv.Xlow = 10
-	Inv.Xhig = 90
-	
-	Inv.Ylow = 10
-	Inv.Yhig = 80
-	
-	Inv.Zlow = 10
-	Inv.Zhig = 90
-	
 	
 
 
@@ -59,6 +58,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if win:
 		print("YAYAYYAYAYA")
+		get_tree().change_scene_to_file("res://ExtraScenes/Win.tscn")
 
 
 func _on_button_pressed() -> void:

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dr482fms616nt"]
+
+[node name="Win" type="Node2D" unique_id=1947929318]
+
+[node name="Button" type="Button" parent="." unique_id=1834567629]
+offset_left = -876.0
+offset_top = -509.0
+offset_right = 519.0
+offset_bottom = 491.0
+text = "Next Level"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1813666432]
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(0.4, 0.4)

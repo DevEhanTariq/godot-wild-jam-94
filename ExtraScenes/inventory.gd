@@ -4,15 +4,6 @@ var down = true
 var TestTubes = []
 var InvTubes = []
 
-var Xlow = 0
-var Xhig = 0
-
-var Ylow = 0
-var Yhig = 0
-
-var Zlow = 0
-var Zhig = 0
-
 @onready var x = $InfoHover/ChemicalX
 @onready var y = $InfoHover/ChemicalY
 @onready var z = $InfoHover/ChemicalZ
@@ -20,12 +11,20 @@ var Zhig = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-	
+
 func CheckWin():
-	var outline = $TestTubeOutline/TestTube
-	if (outline.CX >= Xlow/100 and outline.CX <= Xhig/100) and (outline.CY >= Ylow/100 and outline.CY <= Yhig/100) and (outline.CZ >= Zlow/100 and outline.CZ <= Zhig/100):
-		get_parent().win = true
-		Global.level += 1
+	if len(TestTubes) == 1:
+		var par = get_parent()
+		var outline = $TestTubeOutline/TestTube
+		print(outline.CX, outline.CY, outline.CZ)
+		if round(outline.CX*100) >= par.Xlow:
+			if round(outline.CX*100) <= par.Xhig:
+				if round(outline.CY*100) >= par.Ylow:
+					if round(outline.CY*100) <= par.Yhig:
+						if round(outline.CZ*100) >= par.Zlow:
+							if round(outline.CZ*100) <= par.Xhig:
+								get_parent().win = true
+								Global.level += 1
 		
 func delete():
 	for j in InvTubes:
@@ -49,12 +48,12 @@ func ShowInv():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	x.text = str(Xlow) + " < X < " + str(Xhig)
-	y.text = str(Ylow) + " < Y < " + str(Yhig)
-	z.text = str(Zlow) + " < Z < " + str(Zhig)
+	var par = get_parent()
+	x.text = str(par.Xlow) + " < X < " + str(par.Xhig)
+	y.text = str(par.Ylow) + " < Y < " + str(par.Yhig)
+	z.text = str(par.Zlow) + " < Z < " + str(par.Zhig)
 	delete()
 	ShowInv()
-	
 
 func _on_button_pressed() -> void:
 	if down:
