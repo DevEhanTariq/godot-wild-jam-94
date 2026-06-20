@@ -17,7 +17,7 @@ script = ExtResource("1_58bgk")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=99526315]
 scale = Vector2(0.5, 0.5)
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.2, 0.2)
 
 [node name="screen1" type="Button" parent="." unique_id=1767405535]
 visible = false

@@ -16,7 +16,7 @@ script = ExtResource("1_6b25h")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1121866608]
 scale = Vector2(0.5, 0.5)
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.2, 0.2)
 
 [node name="Label" type="Label" parent="." unique_id=225488643]
 offset_left = -1980.0
