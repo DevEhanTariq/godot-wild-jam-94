@@ -25,6 +25,18 @@ func CheckWin():
 							if round(outline.CZ*100) <= par.Xhig:
 								get_parent().win = true
 								Global.level += 1
+							else:
+								get_parent().fail = true
+						else:
+							get_parent().fail = true
+					else:
+						get_parent().fail = true
+				else:
+					get_parent().fail = true
+			else:
+				get_parent().fail = true
+		else:
+			get_parent().fail = true
 		
 func delete():
 	for j in InvTubes:

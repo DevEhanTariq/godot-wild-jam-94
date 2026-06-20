@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dcsd4lys5vhlo"]
 
-[ext_resource type="Script" uid="uid://cm5jsacfryujc" path="res://MainScenes/workshop_5.gd" id="1_vd07n"]
+[ext_resource type="Script" uid="uid://b5jfyvpkqdalj" path="res://MainScenes/workshop_t.gd" id="1_vd07n"]
 [ext_resource type="PackedScene" uid="uid://calr80v4crctk" path="res://ExtraScenes/TestTubeRack.tscn" id="2_65wa8"]
 [ext_resource type="PackedScene" uid="uid://c2pjwtub2fw8e" path="res://ExtraScenes/Mixer.tscn" id="3_geu4f"]
 [ext_resource type="PackedScene" uid="uid://4qgc87cmh78y" path="res://ExtraScenes/Trash.tscn" id="4_vaokf"]
@@ -8,6 +8,20 @@
 [ext_resource type="PackedScene" uid="uid://b8tehmyl1nsx8" path="res://ExtraScenes/Inventory.tscn" id="6_ahyod"]
 [ext_resource type="PackedScene" uid="uid://wbep5vjrcadx" path="res://ExtraScenes/Distiller.tscn" id="7_pcnef"]
 [ext_resource type="PackedScene" uid="uid://dh7i3arh7e1sg" path="res://ExtraScenes/Evaporator.tscn" id="8_vupa7"]
+[ext_resource type="Texture2D" uid="uid://brtxmqtdncikn" path="res://Assets/Art/background.png" id="9_65wa8"]
+[ext_resource type="Texture2D" uid="uid://bh1i6uq1ay5pi" path="res://Assets/Art/Buttons.png" id="10_geu4f"]
+[ext_resource type="FontFile" uid="uid://jfl58k3vrepm" path="res://Assets/Fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf" id="11_vaokf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaokf"]
+atlas = ExtResource("10_geu4f")
+region = Rect2(0, 500, 1000, 500)
+
+[sub_resource type="Gradient" id="Gradient_27oxk"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.78431374)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ahyod"]
+gradient = SubResource("Gradient_27oxk")
 
 [node name="Node" type="Node" unique_id=980191888]
 script = ExtResource("1_vd07n")
@@ -42,4 +56,66 @@ position = Vector2(1886, 963)
 [node name="Evaporator" parent="." unique_id=986601852 instance=ExtResource("8_vupa7")]
 position = Vector2(435, 963)
 
+[node name="background" type="Sprite2D" parent="." unique_id=264229401]
+z_index = -100
+position = Vector2(308.75027, 150.49997)
+scale = Vector2(1.7912947, 1.1934525)
+texture = ExtResource("9_65wa8")
+
+[node name="Next Level" type="Button" parent="." unique_id=197577468]
+visible = false
+z_index = 2
+offset_left = -1000.0
+offset_top = -500.0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(2, 2)
+icon = SubResource("AtlasTexture_vaokf")
+flat = true
+
+[node name="Label" type="Label" parent="Next Level" unique_id=1521873744]
+layout_mode = 0
+offset_left = 123.5
+offset_top = 144.0
+offset_right = 882.5
+offset_bottom = 334.0
+theme_override_fonts/font = ExtResource("11_vaokf")
+theme_override_font_sizes/font_size = 128
+text = "Next Level"
+
+[node name="blackBlur" type="Sprite2D" parent="Next Level" unique_id=122446126]
+show_behind_parent = true
+position = Vector2(735.7499, 385.99994)
+scale = Vector2(63.226563, 33.031254)
+texture = SubResource("GradientTexture2D_ahyod")
+
+[node name="Restart" type="Button" parent="." unique_id=429762164]
+visible = false
+z_index = 2
+offset_left = -1000.0
+offset_top = -500.0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(2, 2)
+icon = SubResource("AtlasTexture_vaokf")
+flat = true
+
+[node name="Label" type="Label" parent="Restart" unique_id=110523120]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 144.0
+offset_right = 989.0
+offset_bottom = 334.0
+theme_override_fonts/font = ExtResource("11_vaokf")
+theme_override_font_sizes/font_size = 128
+text = "Restart"
+
+[node name="blackBlur" type="Sprite2D" parent="Restart" unique_id=1235892174]
+show_behind_parent = true
+position = Vector2(735.7499, 385.99994)
+scale = Vector2(63.226563, 33.031254)
+texture = SubResource("GradientTexture2D_ahyod")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Next Level" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
