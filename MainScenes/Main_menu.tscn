@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://d1520jlugkla1"]
+
+[ext_resource type="Script" uid="uid://qxdu73cx7qwf" path="res://MainScenes/main_menu.gd" id="1_6b25h"]
+[ext_resource type="Texture2D" uid="uid://brtxmqtdncikn" path="res://Assets/Art/background.png" id="1_sdr7q"]
+[ext_resource type="Texture2D" uid="uid://bh1i6uq1ay5pi" path="res://Assets/Art/Buttons.png" id="2_d4l7q"]
+[ext_resource type="FontFile" uid="uid://jfl58k3vrepm" path="res://Assets/Fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf" id="3_6b25h"]
+[ext_resource type="PackedScene" uid="uid://calr80v4crctk" path="res://ExtraScenes/TestTubeRack.tscn" id="4_d4l7q"]
+[ext_resource type="PackedScene" uid="uid://dh7i3arh7e1sg" path="res://ExtraScenes/Evaporator.tscn" id="6_mvoes"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvoes"]
+atlas = ExtResource("2_d4l7q")
+region = Rect2(0, 1000, 1000, 500)
+
+[node name="MainMenu" type="Node2D" unique_id=979493839]
+script = ExtResource("1_6b25h")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1121866608]
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(0.4, 0.4)
+
+[node name="Label" type="Label" parent="." unique_id=225488643]
+offset_left = -1980.0
+offset_top = -1367.0
+offset_right = 1970.0
+offset_bottom = -576.0
+theme_override_fonts/font = ExtResource("3_6b25h")
+theme_override_font_sizes/font_size = 512
+text = "Chemical XYZ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="background" type="Sprite2D" parent="." unique_id=236127954]
+z_index = -100
+position = Vector2(308.75, 150.5)
+scale = Vector2(1.791, 1.193)
+texture = ExtResource("1_sdr7q")
+
+[node name="Next Level" type="Button" parent="." unique_id=1181311327]
+z_index = 2
+offset_left = -1000.0
+offset_top = 250.0
+offset_right = 8.0
+offset_bottom = 758.0
+scale = Vector2(2, 2)
+icon = SubResource("AtlasTexture_mvoes")
+flat = true
+
+[node name="Label" type="Label" parent="Next Level" unique_id=1642439541]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 141.0
+offset_right = 1069.0
+offset_bottom = 331.0
+theme_override_fonts/font = ExtResource("3_6b25h")
+theme_override_font_sizes/font_size = 128
+text = "Start"
+
+[node name="TestTubeRack" parent="." unique_id=1648364924 instance=ExtResource("4_d4l7q")]
+position = Vector2(-2037, 1203)
+
+[node name="Evaporator" parent="." unique_id=986601852 instance=ExtResource("6_mvoes")]
+position = Vector2(1992, 963)
