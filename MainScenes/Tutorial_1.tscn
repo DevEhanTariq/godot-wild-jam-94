@@ -1,0 +1,381 @@
+[gd_scene format=3 uid="uid://c24rhrbr0ryw6"]
+
+[ext_resource type="Script" uid="uid://bhrvprgb3f1cd" path="res://MainScenes/tutorial_1.gd" id="1_58bgk"]
+[ext_resource type="Texture2D" uid="uid://cfmcp5wkhld82" path="res://Assets/Art/TutorialHover.png" id="2_rhv3w"]
+[ext_resource type="FontFile" uid="uid://jfl58k3vrepm" path="res://Assets/Fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf" id="3_uf352"]
+[ext_resource type="Texture2D" uid="uid://s15hgsx4j8it" path="res://Assets/Art/vecteezy_hand-painted-arrow-clip-art_22056350.png" id="4_sj84j"]
+
+[sub_resource type="Gradient" id="Gradient_o6g6c"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.39215687)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_c1l3b"]
+gradient = SubResource("Gradient_o6g6c")
+
+[node name="Tutorial1" type="Node2D" unique_id=1817676152]
+script = ExtResource("1_58bgk")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=99526315]
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(0.4, 0.4)
+
+[node name="screen1" type="Button" parent="." unique_id=1767405535]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen1" unique_id=1398789834]
+position = Vector2(3553, 1590)
+scale = Vector2(2, 2)
+texture = ExtResource("2_rhv3w")
+
+[node name="Tut" type="Label" parent="screen1/box" unique_id=1118989505]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 38
+text = "This is your Test Tube Rack"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen1/box" unique_id=967203463]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen1" unique_id=161986598]
+position = Vector2(2545, 2200.0002)
+rotation = 2.5537252
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_sj84j")
+
+[node name="blackBlur" type="Sprite2D" parent="screen1" unique_id=52178553]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_c1l3b")
+
+[node name="screen2" type="Button" parent="." unique_id=204902584]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen2" unique_id=1195573961]
+position = Vector2(2538, 1165)
+scale = Vector2(2, 2)
+texture = ExtResource("2_rhv3w")
+
+[node name="Tut" type="Label" parent="screen2/box" unique_id=1897142387]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 38
+text = "And this is an Evaporator"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen2/box" unique_id=1343125726]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen2" unique_id=528518431]
+position = Vector2(3294, 1939.9998)
+rotation = 0.75811195
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_sj84j")
+
+[node name="blackBlur" type="Sprite2D" parent="screen2" unique_id=805296299]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_c1l3b")
+
+[node name="screen3" type="Button" parent="." unique_id=167101661]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen3" unique_id=977890369]
+position = Vector2(3553, 1590)
+scale = Vector2(2, 2)
+texture = ExtResource("2_rhv3w")
+
+[node name="Tut" type="Label" parent="screen3/box" unique_id=667998073]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 38
+text = "If you click on the Test Tube in the Test Tube Rack, it'll go into your inventory"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen3/box" unique_id=5443063]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen3" unique_id=1729113917]
+position = Vector2(2545, 2200.0002)
+rotation = 2.5537252
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_sj84j")
+
+[node name="blackBlur" type="Sprite2D" parent="screen3" unique_id=1545880258]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_c1l3b")
+
+[node name="screen4" type="Button" parent="." unique_id=130955220]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen4" unique_id=701425274]
+position = Vector2(3553, 1590)
+scale = Vector2(2, 2)
+texture = ExtResource("2_rhv3w")
+
+[node name="Tut" type="Label" parent="screen4/box" unique_id=949125568]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 38
+text = "You can view your inventory by clicking the grey bar at the top!"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen4/box" unique_id=1544516710]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen4" unique_id=1122516795]
+position = Vector2(3559.9998, 717)
+rotation = 4.719465
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_sj84j")
+
+[node name="blackBlur" type="Sprite2D" parent="screen4" unique_id=1946156262]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_c1l3b")
+
+[node name="screen5" type="Button" parent="." unique_id=1009306927]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen5" unique_id=426016965]
+position = Vector2(3553, 1590)
+scale = Vector2(2, 2)
+texture = ExtResource("2_rhv3w")
+
+[node name="Tut" type="Label" parent="screen5/box" unique_id=56090090]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 38
+text = "If you click on the empty spot in the Evaporator, you can move your Test Tube there"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen5/box" unique_id=1845090485]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen5" unique_id=15460445]
+position = Vector2(3461.9998, 2355.9995)
+rotation = 7.032351
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_sj84j")
+
+[node name="blackBlur" type="Sprite2D" parent="screen5" unique_id=1975055121]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_c1l3b")
+
+[node name="screen6" type="Button" parent="." unique_id=1421284247]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen6" unique_id=1000052828]
+position = Vector2(3553, 1590)
+scale = Vector2(2, 2)
+texture = ExtResource("2_rhv3w")
+
+[node name="Tut" type="Label" parent="screen6/box" unique_id=604537510]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 38
+text = "By clicking on the Green button, the Evaporator will remove 10% of all Chemicals in a Tube"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen6/box" unique_id=1693743010]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen6" unique_id=835123598]
+position = Vector2(3461.9998, 2355.9995)
+rotation = 7.032351
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_sj84j")
+
+[node name="blackBlur" type="Sprite2D" parent="screen6" unique_id=345509008]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_c1l3b")
+
+[node name="screen7" type="Button" parent="." unique_id=2073886915]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen7" unique_id=1139353785]
+position = Vector2(3553, 1590)
+scale = Vector2(2, 2)
+texture = ExtResource("2_rhv3w")
+
+[node name="Tut" type="Label" parent="screen7/box" unique_id=1973993777]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 38
+text = "You can see the required Chemicals in the inventory"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen7/box" unique_id=864937641]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen7" unique_id=182000891]
+position = Vector2(3869, 720)
+rotation = 5.12237
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_sj84j")
+
+[node name="blackBlur" type="Sprite2D" parent="screen7" unique_id=2113093728]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_c1l3b")
+
+[node name="screen8" type="Button" parent="." unique_id=597606808]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen8" unique_id=1954774467]
+position = Vector2(3553, 1590)
+scale = Vector2(2, 2)
+texture = ExtResource("2_rhv3w")
+
+[node name="Tut" type="Label" parent="screen8/box" unique_id=154281002]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 38
+text = "To complete a level, you need to input a Chemical with the correct attributes"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen8/box" unique_id=792531011]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_uf352")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen8" unique_id=708753941]
+position = Vector2(3869, 720)
+rotation = 5.12237
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_sj84j")
+
+[node name="blackBlur" type="Sprite2D" parent="screen8" unique_id=621425896]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_c1l3b")
+
+[connection signal="pressed" from="screen1" to="." method="_on_screen_1_pressed"]
+[connection signal="pressed" from="screen2" to="." method="_on_screen_2_pressed"]
+[connection signal="pressed" from="screen3" to="." method="_on_screen_3_pressed"]
+[connection signal="pressed" from="screen4" to="." method="_on_screen_4_pressed"]
+[connection signal="pressed" from="screen5" to="." method="_on_screen_5_pressed"]
+[connection signal="pressed" from="screen6" to="." method="_on_screen_6_pressed"]
+[connection signal="pressed" from="screen7" to="." method="_on_screen_7_pressed"]
+[connection signal="pressed" from="screen8" to="." method="_on_screen_8_pressed"]

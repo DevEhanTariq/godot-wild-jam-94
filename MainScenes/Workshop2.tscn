@@ -1,42 +1,41 @@
-[gd_scene format=3 uid="uid://dcsd4lys5vhlo"]
+[gd_scene format=3 uid="uid://ddxrrh0r5mjcg"]
 
-[ext_resource type="Script" uid="uid://b5jfyvpkqdalj" path="res://MainScenes/workshop_t.gd" id="1_vd07n"]
-[ext_resource type="PackedScene" uid="uid://calr80v4crctk" path="res://ExtraScenes/TestTubeRack.tscn" id="2_65wa8"]
-[ext_resource type="PackedScene" uid="uid://c2pjwtub2fw8e" path="res://ExtraScenes/Mixer.tscn" id="3_geu4f"]
-[ext_resource type="PackedScene" uid="uid://4qgc87cmh78y" path="res://ExtraScenes/Trash.tscn" id="4_vaokf"]
-[ext_resource type="Texture2D" uid="uid://co565bnbqegg8" path="res://Assets/Art/Reset.png" id="5_27oxk"]
-[ext_resource type="PackedScene" uid="uid://b8tehmyl1nsx8" path="res://ExtraScenes/Inventory.tscn" id="6_ahyod"]
-[ext_resource type="PackedScene" uid="uid://wbep5vjrcadx" path="res://ExtraScenes/Distiller.tscn" id="7_pcnef"]
-[ext_resource type="PackedScene" uid="uid://dh7i3arh7e1sg" path="res://ExtraScenes/Evaporator.tscn" id="8_vupa7"]
-[ext_resource type="Texture2D" uid="uid://bpo65vrxnhqi5" path="res://Assets/Art/background(2).png" id="9_vaokf"]
-[ext_resource type="Texture2D" uid="uid://bh1i6uq1ay5pi" path="res://Assets/Art/Buttons.png" id="10_geu4f"]
-[ext_resource type="FontFile" uid="uid://jfl58k3vrepm" path="res://Assets/Fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf" id="11_vaokf"]
+[ext_resource type="Script" uid="uid://vh0qkpwtl4kt" path="res://MainScenes/workshop_2.gd" id="1_e7phv"]
+[ext_resource type="PackedScene" uid="uid://calr80v4crctk" path="res://ExtraScenes/TestTubeRack.tscn" id="2_sat8w"]
+[ext_resource type="PackedScene" uid="uid://c2pjwtub2fw8e" path="res://ExtraScenes/Mixer.tscn" id="3_pagiu"]
+[ext_resource type="PackedScene" uid="uid://4qgc87cmh78y" path="res://ExtraScenes/Trash.tscn" id="4_avnkj"]
+[ext_resource type="Texture2D" uid="uid://co565bnbqegg8" path="res://Assets/Art/Reset.png" id="5_50a7l"]
+[ext_resource type="PackedScene" uid="uid://b8tehmyl1nsx8" path="res://ExtraScenes/Inventory.tscn" id="6_rfg1f"]
+[ext_resource type="Texture2D" uid="uid://brtxmqtdncikn" path="res://Assets/Art/background.png" id="9_n44qa"]
+[ext_resource type="Texture2D" uid="uid://bh1i6uq1ay5pi" path="res://Assets/Art/Buttons.png" id="10_5yi7i"]
+[ext_resource type="PackedScene" uid="uid://llja03wg5x0g" path="res://MainScenes/Tutorial_2.tscn" id="10_pagiu"]
+[ext_resource type="FontFile" uid="uid://jfl58k3vrepm" path="res://Assets/Fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf" id="11_xcew3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vaokf"]
-atlas = ExtResource("10_geu4f")
+atlas = ExtResource("10_5yi7i")
 region = Rect2(0, 500, 1000, 500)
 
-[sub_resource type="Gradient" id="Gradient_27oxk"]
+[sub_resource type="Gradient" id="Gradient_o6g6c"]
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0, 0, 0, 0.78431374)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ahyod"]
-gradient = SubResource("Gradient_27oxk")
+gradient = SubResource("Gradient_o6g6c")
 
 [node name="Node" type="Node" unique_id=980191888]
-script = ExtResource("1_vd07n")
+script = ExtResource("1_e7phv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=363873123]
 scale = Vector2(0.5, 0.5)
 zoom = Vector2(0.4, 0.4)
 
-[node name="TestTubeRack" parent="." unique_id=1648364924 instance=ExtResource("2_65wa8")]
+[node name="TestTubeRack" parent="." unique_id=1648364924 instance=ExtResource("2_sat8w")]
 position = Vector2(-2161, 1212)
 
-[node name="Mixer" parent="." unique_id=980892426 instance=ExtResource("3_geu4f")]
+[node name="Mixer" parent="." unique_id=980892426 instance=ExtResource("3_pagiu")]
 position = Vector2(-571, 968)
 
-[node name="Trash" parent="." unique_id=133999584 instance=ExtResource("4_vaokf")]
+[node name="Trash" parent="." unique_id=133999584 instance=ExtResource("4_avnkj")]
 position = Vector2(-2700, -1500)
 
 [node name="Button" type="Button" parent="." unique_id=184228187]
@@ -44,24 +43,17 @@ offset_left = 2300.0
 offset_top = -1500.0
 offset_right = 2708.0
 offset_bottom = -1092.0
-icon = ExtResource("5_27oxk")
+icon = ExtResource("5_50a7l")
 flat = true
 
-[node name="Inventory" parent="." unique_id=350680831 instance=ExtResource("6_ahyod")]
-z_index = 1
+[node name="Inventory" parent="." unique_id=350680831 instance=ExtResource("6_rfg1f")]
 position = Vector2(0, -2500)
-
-[node name="Distiller" parent="." unique_id=5187908 instance=ExtResource("7_pcnef")]
-position = Vector2(1886, 963)
-
-[node name="Evaporator" parent="." unique_id=986601852 instance=ExtResource("8_vupa7")]
-position = Vector2(435, 963)
 
 [node name="background" type="Sprite2D" parent="." unique_id=264229401]
 z_index = -100
 position = Vector2(308.75027, 150.49997)
 scale = Vector2(1.7912947, 1.1934525)
-texture = ExtResource("9_vaokf")
+texture = ExtResource("9_n44qa")
 
 [node name="Next Level" type="Button" parent="." unique_id=197577468]
 visible = false
@@ -80,7 +72,7 @@ offset_left = 123.5
 offset_top = 144.0
 offset_right = 882.5
 offset_bottom = 334.0
-theme_override_fonts/font = ExtResource("11_vaokf")
+theme_override_fonts/font = ExtResource("11_xcew3")
 theme_override_font_sizes/font_size = 128
 text = "Next Level"
 
@@ -107,7 +99,7 @@ offset_left = 230.0
 offset_top = 144.0
 offset_right = 989.0
 offset_bottom = 334.0
-theme_override_fonts/font = ExtResource("11_vaokf")
+theme_override_fonts/font = ExtResource("11_xcew3")
 theme_override_font_sizes/font_size = 128
 text = "Restart"
 
@@ -117,11 +109,7 @@ position = Vector2(735.7499, 385.99994)
 scale = Vector2(63.226563, 33.031254)
 texture = SubResource("GradientTexture2D_ahyod")
 
-[node name="TestTubeRack2" parent="." unique_id=1017056965 instance=ExtResource("2_65wa8")]
-position = Vector2(-2157, -517)
-
-[node name="TestTubeRack3" parent="." unique_id=675430050 instance=ExtResource("2_65wa8")]
-position = Vector2(-625, -510)
+[node name="Tutorial2" parent="." unique_id=334250240 instance=ExtResource("10_pagiu")]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Next Level" to="." method="_on_next_level_pressed"]

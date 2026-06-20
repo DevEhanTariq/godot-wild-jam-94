@@ -35,7 +35,7 @@ position = Vector2(308.75, 150.5)
 scale = Vector2(1.791, 1.193)
 texture = ExtResource("1_sdr7q")
 
-[node name="Next Level" type="Button" parent="." unique_id=1181311327]
+[node name="Start" type="Button" parent="." unique_id=1181311327]
 z_index = 2
 offset_left = -1000.0
 offset_top = 250.0
@@ -45,7 +45,7 @@ scale = Vector2(2, 2)
 icon = SubResource("AtlasTexture_mvoes")
 flat = true
 
-[node name="Label" type="Label" parent="Next Level" unique_id=1642439541]
+[node name="Label" type="Label" parent="Start" unique_id=1642439541]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 141.0
@@ -60,3 +60,5 @@ position = Vector2(-2037, 1203)
 
 [node name="Evaporator" parent="." unique_id=986601852 instance=ExtResource("6_mvoes")]
 position = Vector2(1992, 963)
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

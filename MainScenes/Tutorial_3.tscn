@@ -1,0 +1,246 @@
+[gd_scene format=3 uid="uid://d4fr7v0cgfaof"]
+
+[ext_resource type="Script" uid="uid://dkxfqcrs1iw0e" path="res://tutorial_3.gd" id="1_d144n"]
+[ext_resource type="Texture2D" uid="uid://cfmcp5wkhld82" path="res://Assets/Art/TutorialHover.png" id="2_x3ddm"]
+[ext_resource type="FontFile" uid="uid://jfl58k3vrepm" path="res://Assets/Fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf" id="3_d4erk"]
+[ext_resource type="Texture2D" uid="uid://s15hgsx4j8it" path="res://Assets/Art/vecteezy_hand-painted-arrow-clip-art_22056350.png" id="4_b1j27"]
+
+[sub_resource type="Gradient" id="Gradient_o6g6c"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.39215687)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1g7a5"]
+gradient = SubResource("Gradient_o6g6c")
+
+[node name="Tutorial3" type="Node2D" unique_id=166093686]
+script = ExtResource("1_d144n")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1540210602]
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(0.4, 0.4)
+
+[node name="screen1" type="Button" parent="." unique_id=59949310]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen1" unique_id=378915780]
+position = Vector2(4149, 1798)
+scale = Vector2(2, 2)
+texture = ExtResource("2_x3ddm")
+
+[node name="Tut" type="Label" parent="screen1/box" unique_id=760535907]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_d4erk")
+theme_override_font_sizes/font_size = 38
+text = "This is a Distiller!"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen1/box" unique_id=863190541]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_d4erk")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen1" unique_id=1651483778]
+position = Vector2(4147, 2456.0002)
+rotation = 0.411504
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_b1j27")
+
+[node name="blackBlur" type="Sprite2D" parent="screen1" unique_id=995628972]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_1g7a5")
+
+[node name="screen2" type="Button" parent="." unique_id=455283577]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen2" unique_id=2146630649]
+position = Vector2(4149, 1798)
+scale = Vector2(2, 2)
+texture = ExtResource("2_x3ddm")
+
+[node name="Tut" type="Label" parent="screen2/box" unique_id=503582135]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_d4erk")
+theme_override_font_sizes/font_size = 38
+text = "It can Seperate a Chemical into its three components"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen2/box" unique_id=141544557]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_d4erk")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen2" unique_id=1683624622]
+position = Vector2(4147, 2456.0002)
+rotation = 0.411504
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_b1j27")
+
+[node name="blackBlur" type="Sprite2D" parent="screen2" unique_id=126050156]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_1g7a5")
+
+[node name="screen3" type="Button" parent="." unique_id=1537196891]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen3" unique_id=1572073283]
+position = Vector2(4149, 1798)
+scale = Vector2(2, 2)
+texture = ExtResource("2_x3ddm")
+
+[node name="Tut" type="Label" parent="screen3/box" unique_id=247257379]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_d4erk")
+theme_override_font_sizes/font_size = 38
+text = "For this to happen, all slots need to be empty, except for the top most slot!"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen3/box" unique_id=514089793]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_d4erk")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen3" unique_id=313992771]
+position = Vector2(4147, 2456.0002)
+rotation = 0.411504
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_b1j27")
+
+[node name="blackBlur" type="Sprite2D" parent="screen3" unique_id=677833429]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_1g7a5")
+
+[node name="screen4" type="Button" parent="." unique_id=1737121742]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen4" unique_id=1396193508]
+position = Vector2(4149, 1798)
+scale = Vector2(2, 2)
+texture = ExtResource("2_x3ddm")
+
+[node name="Tut" type="Label" parent="screen4/box" unique_id=1360829892]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_d4erk")
+theme_override_font_sizes/font_size = 38
+text = "A Distiller can also combine any three Chemicals!"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen4/box" unique_id=2003535059]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_d4erk")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen4" unique_id=1038507562]
+position = Vector2(4147, 2456.0002)
+rotation = 0.411504
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_b1j27")
+
+[node name="blackBlur" type="Sprite2D" parent="screen4" unique_id=1248062326]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_1g7a5")
+
+[node name="screen5" type="Button" parent="." unique_id=425484825]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen5" unique_id=607470779]
+position = Vector2(4149, 1798)
+scale = Vector2(2, 2)
+texture = ExtResource("2_x3ddm")
+
+[node name="Tut" type="Label" parent="screen5/box" unique_id=425166345]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("3_d4erk")
+theme_override_font_sizes/font_size = 38
+text = "For this to happen, all slots need to be full, except for the top most slot!"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen5/box" unique_id=1040898204]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_d4erk")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen5" unique_id=290580165]
+position = Vector2(4147, 2456.0002)
+rotation = 0.411504
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("4_b1j27")
+
+[node name="blackBlur" type="Sprite2D" parent="screen5" unique_id=1348307022]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_1g7a5")
+
+[connection signal="pressed" from="screen1" to="." method="_on_screen_1_pressed"]
+[connection signal="pressed" from="screen2" to="." method="_on_screen_2_pressed"]
+[connection signal="pressed" from="screen3" to="." method="_on_screen_3_pressed"]
+[connection signal="pressed" from="screen4" to="." method="_on_screen_4_pressed"]
+[connection signal="pressed" from="screen5" to="." method="_on_screen_5_pressed"]

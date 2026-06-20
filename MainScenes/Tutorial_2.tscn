@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://llja03wg5x0g"]
+
+[ext_resource type="Texture2D" uid="uid://cfmcp5wkhld82" path="res://Assets/Art/TutorialHover.png" id="1_1koke"]
+[ext_resource type="Script" uid="uid://cokt4d70u65ma" path="res://MainScenes/tutorial_2.gd" id="1_hn30e"]
+[ext_resource type="FontFile" uid="uid://jfl58k3vrepm" path="res://Assets/Fonts/Science_Gothic/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf" id="2_hn30e"]
+[ext_resource type="Texture2D" uid="uid://s15hgsx4j8it" path="res://Assets/Art/vecteezy_hand-painted-arrow-clip-art_22056350.png" id="3_34fks"]
+
+[sub_resource type="Gradient" id="Gradient_o6g6c"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.39215687)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5omk8"]
+gradient = SubResource("Gradient_o6g6c")
+
+[node name="Tutorial2" type="Node2D" unique_id=334250240]
+script = ExtResource("1_hn30e")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1622253590]
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(0.4, 0.4)
+
+[node name="screen1" type="Button" parent="." unique_id=751476419]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen1" unique_id=1465472237]
+position = Vector2(3553, 1590)
+scale = Vector2(2, 2)
+texture = ExtResource("1_1koke")
+
+[node name="Tut" type="Label" parent="screen1/box" unique_id=581260539]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("2_hn30e")
+theme_override_font_sizes/font_size = 38
+text = "The Black Chemical is called Black Acid, it's a Chemical that contains zero Chemical X, Y and Z"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen1/box" unique_id=1207439679]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("2_hn30e")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen1" unique_id=172860658]
+position = Vector2(2545, 2200.0002)
+rotation = 2.5537252
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("3_34fks")
+
+[node name="blackBlur" type="Sprite2D" parent="screen1" unique_id=116779756]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_5omk8")
+
+[node name="screen2" type="Button" parent="." unique_id=1418855094]
+visible = false
+offset_left = -3732.0
+offset_top = -1815.0
+offset_right = 3276.0
+offset_bottom = 1839.0
+flat = true
+
+[node name="box" type="Sprite2D" parent="screen2" unique_id=34162720]
+position = Vector2(4785, 1815)
+scale = Vector2(2, 2)
+texture = ExtResource("1_1koke")
+
+[node name="Tut" type="Label" parent="screen2/box" unique_id=2120646386]
+offset_left = -240.0
+offset_top = -162.5
+offset_right = 218.5
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("2_hn30e")
+theme_override_font_sizes/font_size = 38
+text = "And this is a Mixer, it gives the average of the two inputted Chemicals"
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="screen2/box" unique_id=529616723]
+offset_left = -233.5
+offset_top = 132.0
+offset_right = 227.5
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("2_hn30e")
+theme_override_font_sizes/font_size = 24
+text = "<Click on the screen to continue> "
+
+[node name="VecteezyHandPaintedArrowClipArt22056350" type="Sprite2D" parent="screen2" unique_id=1862661510]
+position = Vector2(4380, 2432.0002)
+rotation = 2.9021845
+scale = Vector2(0.11354552, -0.09357643)
+texture = ExtResource("3_34fks")
+
+[node name="blackBlur" type="Sprite2D" parent="screen2" unique_id=287869580]
+show_behind_parent = true
+position = Vector2(3621.4998, 1909.0002)
+scale = Vector2(99.35937, 58.90625)
+texture = SubResource("GradientTexture2D_5omk8")
+
+[connection signal="pressed" from="screen1" to="." method="_on_screen_1_pressed"]
+[connection signal="pressed" from="screen2" to="." method="_on_screen_2_pressed"]
